@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Champion = ({ champion }) => (
-    <div className='card'>
+    <div className='card col-n'>
     <h3 className='championName'>{champion.name}</h3>
     <img src={champion.img} alt={champion.name} />
     <p className='championTitle'>{champion.title}</p>
@@ -9,7 +9,7 @@ const Champion = ({ champion }) => (
       <p className='tags'>
         {champion.tags.map((tag, index) => (
           <span className='tag' key={index}>
-            {index > 0 && <span className="tag-separator"> </span>}
+            {index > 0 && <div className="tag-separator"> </div>}
             {tag}
           </span>
         ))}

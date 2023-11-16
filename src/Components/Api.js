@@ -24,7 +24,7 @@ export default function ChampionsList() {
               };
             });
 
-            const limetedChampionsArray = championsArray.slice(0, 24);
+            const limetedChampionsArray = championsArray.slice(0, 165);
       
             setChampions(limetedChampionsArray);
           } catch (error) {

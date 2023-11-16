@@ -6,21 +6,34 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.Wrapper {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    justify-items: center;
-    overflow: hidden;
-    width: 100%;
-    background-image: url("../myndir/LeagueBackground.webp");
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-attachment: fixed;
+html {
+  overflow: hidden scroll;
 }
 
-.Wrapper .col-4 {
+html, body, #root, .Wrapper {
+  min-height: 100vh;
+}
+
+.tempTitle {
+  -webkit-text-stroke: 2px black; /* width and color */
+  color: rgb(43, 139, 146);
+}
+
+.Wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background: center url("../myndir/LeagueBackground.webp");
+  background-size: cover; /* or contain, or specify dimensions */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.grid-container {
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
   max-width: 1400px;
   width: 100%;
@@ -28,82 +41,79 @@
 }
 
 .header {
+  -webkit-text-stroke: 2px black; /* width and color */
   color: rgb(43, 139, 146);
   font-size: 25px;
-  border-bottom: 3px solid rgb(31, 31, 94);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   width: 100%;
   padding: 2rem;
 }
 
-.main {
+.cards {
   display: grid;
-  /*gap: 1rem;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  width: 100%;
-  max-width: 1400px; */
-}
-
-.main:first-child() {
-  align-self: center;
+  margin: 1rem 0;
+  grid-template-columns: repeat(12, 1fr);
+  width: calc(100% - (2 * 20px));
+  gap: 3rem;
+  /* max-width: 90%; */
 }
 
 .card img {
-  width: 200px;
-  height: 200px;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-.cards {
-
-  margin: 1rem 0;
-  
-}
-
 .card {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-rows: auto;
-  justify-items: center;
   width: 100%;
   background-color: rgba(159, 243, 239, 0.264);
   border-radius: 40px;
-  padding: 1rem 0.5rem; 
-  /* display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  gap: 1rem;
-  align-items: center;
-  border: 1px solid blue;*/
+  padding:1rem
+}
+
+.col-n {
+  grid-column-end: span 2;
+}
+
+@media (max-width:1350px) {
+  .col-n {
+    grid-column-end: span 3;
+  }
+}
+
+@media (max-width:1000px) {
+  .col-n {
+    grid-column-end: span 4;
+  }
+}
+
+@media (max-width:700px) {
+  .col-n {
+    grid-column-end: span 6;
+  }
 }
 
 .championName {
   font-size: x-large;
-  margin-top: 1rem;
 }
 
 .championTitle {
-  font-size: 25px;
-  padding: 0 1rem;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5rem;
-}
-
-ul li {
-  margin: 1rem;
+  font-size: 12px;
 }
 
 .tags {
-  margin: 1rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .tag {
@@ -111,12 +121,7 @@ ul li {
   color: white;
   padding: 10px;
   border-radius: 20px;
-  margin-bottom: 1rem;
-}
 
-/* Aðeins setja margin á milli tagga sem hafa ekki tag-separator */
-.tag:not(.tag-separator) {
-  margin-right: 1rem;
 }
 
 .tag:hover {
@@ -126,23 +131,10 @@ ul li {
   cursor: pointer;
 }
 
-/* Responsive grid fyrir 1200px */
-@media (max-width: 1400px) {
-  .col-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Responsive grid fyrir 500px */
-@media (max-width: 1000px) {
-  .col-4 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Responsive grid fyrir 500px */
-@media (max-width: 500px) {
-  .col-4 {
-    grid-template-columns: repeat(1, 1fr);
-  }
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
