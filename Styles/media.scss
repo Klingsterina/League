@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1400px;
+  width: 100%;
+}
+
+.col-n {
+  grid-column-end: span 2;
+}
+
+@media (max-width:1350px) {
+  .col-n {
+    grid-column-end: span 3;
+  }
+}
+
+@media (max-width:1000px) {
+  .col-n {
+    grid-column-end: span 4;
+  }
+}
+
+@media (max-width:700px) {
+  .col-n {
+    grid-column-end: span 6;
+  }
+}

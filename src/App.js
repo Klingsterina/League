@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import useFetchChampions from './Components/Api';
 import Champion from './Components/Champion';
 import { useState } from "react";
@@ -19,14 +19,14 @@ function App() {
   }
 
   return (
-    <div className="Wrapper">
+    <div className="wrapper">
       <header className='header'>
         <h1>
           League of Legends database
         </h1>
       </header>
 
-      <h1 className='tempTitle'>Champions</h1>
+      <h1 className='temptitle'>Champions</h1>
       <input
         placeholder='Skrifa hér til að leita'
         type="text"

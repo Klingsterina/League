@@ -2,9 +2,9 @@ import React from 'react';
 
 const Champion = ({ champion }) => (
     <div className='card col-n'>
-    <h3 className='championName'>{champion.name}</h3>
+    <h3 className='champion-name'>{champion.name}</h3>
     <img src={champion.img} alt={champion.name} />
-    <p className='championTitle'>{champion.title}</p>
+    <p className='champion-title'>{champion.title}</p>
     {champion.tags.length > 1 ? (
       <p className='tags'>
         {champion.tags.map((tag, index) => (

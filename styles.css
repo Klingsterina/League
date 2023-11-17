@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* Reset og border-box á allt */
+* {
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: hidden scroll;
+}
+
+html, body, #root, .Wrapper {
+  min-height: 100vh;
+}
+
+.header {
+  -webkit-text-stroke: 2px black; /* width and color */
+  align-items: center;
+  color: rgb(43, 139, 146);
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  gap: 1rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 1rem 0;
+  width: calc(100% - 40px);
+}
+
+.card img {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  align-items: center;
+  background-color: rgba(159, 243, 239, 0.264);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.tempTitle {
+  color: rgb(43, 139, 146);
+  -webkit-text-stroke: 2px black; /* width and color */
+}
+
+.championName {
+  font-size: x-large;
+}
+
+.championTitle {
+  font-size: 12px;
+}
+
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.tag {
+  background-color: rgba(183, 124, 241, 0.441);
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.tag:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1400px;
+  width: 100%;
+}
+
+.col-n {
+  grid-column-end: span 2;
+}
+
+@media (max-width: 1350px) {
+  .col-n {
+    grid-column-end: span 3;
+  }
+}
+@media (max-width: 1000px) {
+  .col-n {
+    grid-column-end: span 4;
+  }
+}
+@media (max-width: 700px) {
+  .col-n {
+    grid-column-end: span 6;
+  }
+}
+.Wrapper {
+  align-items: center;
+  background: center url("../myndir/LeagueBackground.webp");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; /* or contain, or specify dimensions */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
