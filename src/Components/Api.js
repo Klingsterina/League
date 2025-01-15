@@ -16,7 +16,7 @@ export default function ChampionsList() {
       
             const championsArray = Object.values(championsData).map(championData => {
               return {
-                img: `https://ddragon.leagueoflegends.com/cdn/13.22.1/img/champion/${championData.image.full}`,
+                img: `https://ddragon.leagueoflegends.com/cdn/15.1.1/img/champion/${championData.image.full}`,
                 index: championData.key,
                 name: championData.name,
                 title: championData.title,
