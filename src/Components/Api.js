@@ -6,7 +6,7 @@ export default function ChampionsList() {
     useEffect(() => {
         const fetchChampions = async () => {
           try {
-            const response = await fetch('https://ddragon.leagueoflegends.com/cdn/13.22.1/data/en_US/champion.json');
+            const response = await fetch('https://ddragon.leagueoflegends.com/cdn/15.1.1/data/en_US/champion.json');
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
