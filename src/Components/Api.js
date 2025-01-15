@@ -24,7 +24,7 @@ export default function ChampionsList() {
               };
             });
 
-            const limetedChampionsArray = championsArray.slice(0, 165);
+            const limetedChampionsArray = championsArray.slice(0, 170);
       
             setChampions(limetedChampionsArray);
           } catch (error) {
@@ -36,4 +36,4 @@ export default function ChampionsList() {
       }, []);
 
       return champions;
-    };
+};

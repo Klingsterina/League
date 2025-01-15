@@ -1,13 +1,22 @@
 import './App.scss';
 import useFetchChampions from './Components/Api';
 import Champion from './Components/Champion';
-import { useState } from "react";
+import { useState, useEffect} from "react";
 
 
 function App() {
   const champions = useFetchChampions();
   const [filteredList, setFilteredList] = useState(champions) ;
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {
+    if (champions.length > 0) {
+        setFilteredList(champions);
+        setIsLoading(false);
+    }
+}, [champions]);
 
   const searchHandler = (e) => {
     const query = e.target.value.toLowerCase();
@@ -33,12 +42,18 @@ function App() {
         value={searchQuery}
         onChange={searchHandler}
       />
-      <ul className='cards'>
-        {filteredList.map(champion => (
-          <Champion key={champion.index} champion={champion} />
-        ))}
-      </ul>
-    </div>
+      {isLoading ? (
+                <p>Loading champions...</p>
+            ) : filteredList.length === 0 ? (
+                <p>No champions match your search.</p>
+            ) : (
+                <ul className="cards">
+                    {filteredList.map(champion => (
+                        <Champion key={champion.index} champion={champion} />
+                    ))}
+                </ul>
+            )}
+        </div>
   );
 }
 
