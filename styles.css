@@ -41,6 +41,9 @@ html, body, .wrapper {
   grid-template-columns: repeat(12, 1fr);
   margin: 1rem 0;
   width: calc(100% - 40px);
+  background-color: rgba(0, 0, 0, 0.4549019608);
+  border-radius: 40px;
+  padding: 1rem;
 }
 
 .card img {
@@ -50,7 +53,7 @@ html, body, .wrapper {
 
 .card {
   align-items: center;
-  background-color: rgba(159, 243, 239, 0.264);
+  background-color: rgba(119, 174, 171, 0.433);
   border-radius: 40px;
   display: flex;
   flex-direction: column;
@@ -67,10 +70,13 @@ html, body, .wrapper {
 
 .champion-name {
   font-size: x-large;
+  color: rgb(245, 248, 248);
+  -webkit-text-stroke: 1px #000; /* width and color */
 }
 
 .champion-title {
-  font-size: 12px;
+  font-size: 14px;
+  color: rgb(245, 248, 248);
 }
 
 .tags {
@@ -86,12 +92,6 @@ html, body, .wrapper {
   border-radius: 20px;
   color: #fff;
   padding: 10px;
-}
-
-.tag:hover {
-  background-color: transparent;
-  border: 1px solid #000;
-  color: #000;
 }
 
 input {
@@ -150,7 +150,66 @@ input {
   border-radius: 5px;
   background-color: rgba(12, 26, 21, 0.337254902);
   color: rgb(43, 139, 146);
-  font-size: 15px;
+  font-size: 1rem; /* Scales with screen size */
+}
+
+.skins-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  max-width: 950px;
+  gap: 2rem;
+  place-items: center;
+  width: 100%;
+}
+
+@media (max-width: 999px) {
+  .skins-grid {
+    grid-template-columns: repeat(1, 1fr); /* Switch to one column */
+    max-width: 80%; /* Use percentage for better adaptability */
+    margin: 0 auto; /* Center the grid on smaller screens */
+  }
+}
+.skins-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.skin-image {
+  border-radius: 10px;
+  max-width: 100%; /* Ensures it scales with the container */
+  height: auto;
+  border: 2px solid rgb(43, 139, 146);
+}
+
+.skin-name {
+  color: rgb(245, 248, 248);
+  font-size: 1.2rem;
+  -webkit-text-stroke: 1px #000; /* width and color */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.skins-h2, .lore-h2 {
+  color: rgb(203, 255, 255);
+  font-size: 1.8rem;
+  -webkit-text-stroke: 1px #000;
+  text-align: center;
+}
+
+.lore-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 90%; /* Shrinks to fit smaller screens */
+  max-width: 950px;
+  background-color: rgba(43, 139, 146, 0.714);
+  border-radius: 10px;
+  padding: 1rem;
+  color: rgb(245, 248, 248);
 }
 
 /*# sourceMappingURL=styles.css.map */

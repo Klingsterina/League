@@ -28,7 +28,8 @@ export default function ChampionsList() {
               name: championData.name,
               title: championData.title,
               tags: championData.tags,
-              skins: detailedData.skins || []
+              skins: detailedData.skins || [],
+              lore: detailedData.lore
             };
           })
         );

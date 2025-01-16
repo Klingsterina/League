@@ -19,7 +19,6 @@ function DetailedChampions() {
   if (!championData) {
     return <p>No champion data found.</p>;
   }
-
   return (
     <div className="wrapper">
       <header className="header">
@@ -36,10 +35,18 @@ function DetailedChampions() {
           alt={championData.name}
           className="champion-image"
         />
-        <div className="tags">
-          <strong>Tags: </strong>
-          {championData.tags.join(', ')}
+        <div className='tags'>
+          {championData.tags.map((tag, index) => (
+            <span key={index} className='tag'>
+              {tag}
+              {index < championData.tags.length - 1}
+            </span>
+          ))}
         </div>
+      </div>
+      <div className='lore-container'>
+        <h2 className='lore-h2'>Lore</h2>
+        <p className='lore'>{championData.lore}</p>
       </div>
       <div>
         <h2 className='skins-h2'>Skins</h2>
