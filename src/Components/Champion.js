@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Champion = ({ champion }) => (
-    <div className='card col-n'>
+  <div className='card col-n'>
     <h3 className='champion-name'>{champion.name}</h3>
-    <img src={champion.img} alt={champion.name} />
+    <Link to={`/champion/${champion.name}`}>
+      <img src={champion.img} alt={champion.name} />
+    </Link>
     <p className='champion-title'>{champion.title}</p>
     {champion.tags.length > 1 ? (
       <p className='tags'>
