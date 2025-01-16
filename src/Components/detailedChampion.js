@@ -25,7 +25,9 @@ function DetailedChampion() {
       <header className="header">
         <h1>League of Legends Database</h1>
       </header>
-
+      <div>
+        <a href="/" className='back-link'>Back to champions</a>
+      </div>
       <div className="champion-details">
         <h1>{championData.name}</h1>
         <p>{championData.title}</p>
@@ -38,6 +40,9 @@ function DetailedChampion() {
           <strong>Tags: </strong>
           {championData.tags.join(', ')}
         </div>
+      </div>
+      <div>
+
       </div>
     </div>
   );
