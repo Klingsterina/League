@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ChampionsList from './Api'; // Import your custom hook
 import { useState, useEffect } from 'react';
 
-function DetailedChampion() {
+function DetailedChampions() {
   const { id } = useParams(); // Get the champion ID from the route parameters
   const champions = ChampionsList(); // Use the custom hook to fetch champions
   const [championData, setChampionData] = useState(null);
@@ -60,4 +60,4 @@ function DetailedChampion() {
   );
 }
 
-export default DetailedChampion;
+export default DetailedChampions;
