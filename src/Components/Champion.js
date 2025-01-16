@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Champion = ({ champion }) => (
   <div className='card col-n'>
     <h3 className='champion-name'>{champion.name}</h3>
-    <Link to={`/champion/${champion.name}`}>
+    <Link to={`/champion/${champion.id}`}>
       <img src={champion.img} alt={champion.name} />
     </Link>
     <p className='champion-title'>{champion.title}</p>
