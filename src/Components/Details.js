@@ -42,11 +42,11 @@ function DetailedChampions() {
         </div>
       </div>
       <div>
-        <h2>Skins</h2>
+        <h2 className='skins-h2'>Skins</h2>
         <div className="skins-grid">
           {championData.skins.map((skins) => (
             <div key={skins.num} className="skin-card">
-              <p>{skins.name}</p>
+              <p className='skin-name'>{skins.name}</p>
               <img
                 src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.name}_${skins.num}.jpg`}
                 alt={skins.name}

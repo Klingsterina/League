@@ -8,3 +8,38 @@
     color: rgb(43, 139, 146);
     font-size: 15px;
 }
+
+.skins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+    gap: 3rem;
+    place-items: center;
+    margin: 1rem 0rem 1rem 0rem;
+    width: 100%;
+}
+
+.skins-card {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    // width: 100%; /* Ensure it spans full width of grid item */
+}
+
+.skin-image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(43, 139, 146);
+}
+
+.skin-name {
+    color: rgb(245, 248, 248);
+    font-size: 20px;
+    -webkit-text-stroke: 1px #000; /* width and color */
+}
+
+.skins-h2 {
+    color: rgb(43, 139, 146);
+    font-size: 30px;
+    -webkit-text-stroke: 1px #000; /* width and color */
+}
