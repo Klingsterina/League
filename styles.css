@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* Reset og border-box á allt */
 * {
-  list-style: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -11,25 +11,33 @@ html {
   overflow: hidden scroll;
 }
 
-html, body, #root, .Wrapper {
+html:hover {
+  cursor: url(http://www.rw-designer.com/cursor-extern.php?id=134125), auto;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+html, body, .wrapper {
   min-height: 100vh;
 }
 
 .header {
-  -webkit-text-stroke: 2px black; /* width and color */
+  -webkit-text-stroke: 2px #000; /* width and color */
   align-items: center;
   color: rgb(43, 139, 146);
   display: flex;
   flex-direction: column;
   font-size: 25px;
   gap: 1rem;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   width: 100%;
 }
 
 .cards {
   display: grid;
-  gap: 3rem;
+  gap: 1rem;
   grid-template-columns: repeat(12, 1fr);
   margin: 1rem 0;
   width: calc(100% - 40px);
@@ -48,20 +56,20 @@ html, body, #root, .Wrapper {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 0rem 1rem 0rem;
   width: 100%;
 }
 
-.tempTitle {
+.temptitle {
   color: rgb(43, 139, 146);
-  -webkit-text-stroke: 2px black; /* width and color */
+  -webkit-text-stroke: 2px #000; /* width and color */
 }
 
-.championName {
+.champion-name {
   font-size: x-large;
 }
 
-.championTitle {
+.champion-title {
   font-size: 12px;
 }
 
@@ -76,15 +84,14 @@ html, body, #root, .Wrapper {
 .tag {
   background-color: rgba(183, 124, 241, 0.441);
   border-radius: 20px;
-  color: white;
+  color: #fff;
   padding: 10px;
 }
 
 .tag:hover {
   background-color: transparent;
-  border: 1px solid black;
-  color: black;
-  cursor: pointer;
+  border: 1px solid #000;
+  color: #000;
 }
 
 input {
@@ -122,7 +129,7 @@ input {
     grid-column-end: span 6;
   }
 }
-.Wrapper {
+.wrapper {
   align-items: center;
   background: center url("../myndir/LeagueBackground.webp");
   background-attachment: fixed;
@@ -133,6 +140,17 @@ input {
   gap: 1rem;
   overflow: hidden;
   width: 100%;
+}
+
+.back-link {
+  -webkit-text-stroke: 0.5px #000; /* width and color */
+  text-decoration: none; /* Removes underline */
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgba(12, 26, 21, 0.337254902);
+  color: rgb(43, 139, 146);
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=styles.css.map */
