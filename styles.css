@@ -95,7 +95,7 @@ html, body, .wrapper {
 }
 
 input {
-  border-radius: 4px;
+  border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 16px;
   margin-bottom: 10px;
@@ -202,14 +202,101 @@ input {
 .lore-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 1rem auto;
-  width: 90%; /* Shrinks to fit smaller screens */
-  max-width: 950px;
+  width: 950px;
   background-color: rgba(43, 139, 146, 0.714);
   border-radius: 10px;
-  padding: 1rem;
   color: rgb(245, 248, 248);
+}
+
+.lore {
+  padding: 1rem;
+}
+
+.champion-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.711);
+  border: 1px solid rgb(43, 139, 146);
+  border-radius: 10px;
+  width: 950px;
+}
+
+.champion-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  align-items: center;
+}
+
+.champion-title {
+  color: rgb(245, 248, 248);
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px #000;
+}
+
+.champion-info img {
+  border-radius: 10px;
+  width: 100px;
+  border: 1px solid rgb(43, 139, 146);
+}
+
+.spells-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four equally spaced columns */
+  gap: 0.5rem; /* Reduce space between the columns and rows */
+}
+
+.spell-name {
+  color: rgb(245, 248, 248);
+  font-size: 1.2rem;
+  -webkit-text-stroke: 1px #000;
+  text-align: center;
+}
+
+.spell-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem; /* Reduce padding */
+  width: auto; /* Ensure it only takes up necessary space */
+}
+
+.spell-card img {
+  border-radius: 10px;
+  width: 48px; /* Image size */
+  height: 48px; /* Optional: Ensure a fixed height */
+  border: 1px solid rgb(43, 139, 146);
+}
+
+.statsAndTips-container {
+  background-color: rgba(119, 174, 171, 0.433);
+  border-radius: 10px;
+  width: 950px;
+  display: flex;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0rem 1rem 1rem;
+  width: 100%;
+  color: rgb(245, 248, 248);
+}
+
+.stats-h2 {
+  color: rgb(245, 248, 248);
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px #000;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

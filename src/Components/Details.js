@@ -27,21 +27,59 @@ function DetailedChampions() {
       <div>
         <a href="/" className="back-link">Back to champions</a>
       </div>
-      <div className="champion-details">
-        <h1>{championData.name}</h1>
-        <p>{championData.title}</p>
-        <img
-          src={championData.img}
-          alt={championData.name}
-          className="champion-image"
-        />
-        <div className='tags'>
-          {championData.tags.map((tag, index) => (
-            <span key={index} className='tag'>
-              {tag}
-              {index < championData.tags.length - 1}
-            </span>
-          ))}
+      <div className="champion-container">
+        <div className="champion-info">
+          <h1 className='champion-name'>{championData.name}</h1>
+          <p className='champion-title'>{championData.title}</p>
+          <img
+            src={championData.img}
+            alt={championData.name}
+            className="champion-image"
+          />
+          <div className='tags'>
+            {championData.tags.map((tag, index) => (
+              <span key={index} className='tag'>
+                {tag}
+                {index < championData.tags.length - 1}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className='spells-container'>
+          <div className='spells-grid'>
+            {championData.spells.map((spell) => (
+              <div key={spell.id} className='spell-card'>
+                <img
+                  src={`https://ddragon.leagueoflegends.com/cdn/15.1.1/img/spell/${spell.image.full}`}
+                  alt={spell.name}
+                  className='spell-image'
+                />
+                <p className='spell-name'>{spell.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='statsAndTips-container'>
+        <h2 className='stats-h2'>Stats</h2>
+        <div className="stats-grid">
+        {Object.keys(championData.stats).map((stat) => (
+          <div key={stat} className="stat-card">
+            <p className="stat">
+              {stat}: {championData.stats[stat]}
+            </p>
+          </div>
+        ))}
+        </div>
+        <div className='tips-grid'>
+          <div className='tips'>
+            <h2 className='tips-h2'>Tips</h2>
+            <p>{championData.allytips}</p>
+          </div>
+          <div className='tips'>
+            <h2 className='tips-h2'>Counter Tips</h2>
+            <p>{championData.enemytips}</p>
+          </div>
         </div>
       </div>
       <div className='lore-container'>

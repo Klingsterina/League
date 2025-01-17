@@ -29,7 +29,11 @@ export default function ChampionsList() {
               title: championData.title,
               tags: championData.tags,
               skins: detailedData.skins || [],
-              lore: detailedData.lore
+              lore: detailedData.lore,
+              stats: detailedData.info,
+              spells: detailedData.spells,
+              allytips: detailedData.allytips,
+              enemytips: detailedData.enemytips
             };
           })
         );

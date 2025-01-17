@@ -34,7 +34,7 @@ function SearchChampions() {
       </header>
       <h1 className='temptitle'>Champions</h1>
       <input
-        placeholder='Skrifa hér til að leita'
+        placeholder='Sláðu inn leitarorð'
         type="text"
         value={searchQuery}
         onChange={searchHandler}
